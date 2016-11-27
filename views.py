@@ -36,9 +36,9 @@ def callBack():
                   sender='anastacia111@yandex.ru',
                   recipients=["vskazke.info@gmail.com"],)
     msg.body = 'text body'
-    msg.html = "<ul>Контактные данные<li>имя: %s</li>,\
-            <li>тел: %s</li></ul>" %\
+    msg.html = "<ul>Name: %s</li>,\
+            <li>Phone: %s</li></ul>" %\
         (name, phone)
     mail.send(msg)
-    return 'Отправлено'
+    return 'send'
 
