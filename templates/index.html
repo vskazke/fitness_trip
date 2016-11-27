@@ -1,50 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title>Fit-trip</title>
-
-  <!-- CSS  -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-</head>
-<body>
-  <nav class="white" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Fit-trip</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Главная</a></li>
-        <li><a href="#">О Нас</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
-
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h1 class="header center teal-text text-lighten-2">Какой-н заголовок</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">Не знаешь куда поехать?</h5>
+{% extends "base.html" %}
+{%block content %}
+    <div class="carousel carousel-slider center" data-indicators="true">
+        <div class="carousel-fixed-item center">
+            <a class="btn waves-effect white grey-text darken-text-2">Заказать тур</a>
         </div>
-        <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Заказать тур</a>
+        <div class="carousel-item red white-text" href="#one!">
+            <h2>First Panel</h2>
+            <p class="white-text">This is your first panel</p>
         </div>
-        <br><br>
-
-      </div>
+        <div class="carousel-item amber white-text" href="#two!">
+            <h2>Second Panel</h2>
+            <p class="white-text">This is your second panel</p>
+        </div>
+        <div class="carousel-item green white-text" href="#three!">
+            <h2>Third Panel</h2>
+            <p class="white-text">This is your third panel</p>
+        </div>
+        <div class="carousel-item blue white-text" href="#four!">
+            <h2>Fourth Panel</h2>
+            <p class="white-text">This is your fourth panel</p>
+        </div>
     </div>
-    <div class="parallax"><img src="static/images/background1.jpg" alt="Unsplashed background img 1"></div>
-  </div>
-
 
   <div class="container">
       <div class="section">
@@ -56,12 +32,14 @@
             <div class="icon-block">
                 <div class="card">
                     <div class="card-image">
-                        <img src="static/images/bali.jpg">
-                        <span class="card-title">Фитнесс на Бали</span>
+                        <img src="static/images/kemer.jpg">
+                        <span class="card-title">Фитнесс в Турции</span>
                     </div>
                     <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
+                        <p><span class='title'>Турция, Кемер</span></p>
+                        <p>3 декабря на 7 ночей</p>
+                        <p>Все включено. Фитнес пакет 2 тренировки ежедневно ( танцы, йога, фитнес)</p>
+                        <p>Цена: <span class='price'>15 000 на человека</span></p>
                     </div>
                     <div class="card-action">
                         <a href="#">Подробнее</a>
@@ -74,12 +52,15 @@
             <div class="icon-block">
                 <div class="card">
                     <div class="card-image">
-                        <img src="static/images/alpi.jpg">
-                        <span class="card-title">Вело в Альпах</span>
+                        <img src="static/images/phuket.jpg">
+                        <span class="card-title">Танцы, Йога, Фитнес на Пхукете</span>
                     </div>
                     <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
+                        <p><span class='title'>Тайланд, Пхукет</span></p>
+                        <p>5 апреля 14 ночей</p>
+                        <p>Завтрак, отель Naithonburi. фитнес пакет 3-4 тренировки в день на выбор, 
+                        3 тренера . Танцы, йога, фитнес, возможность заниматься персонально по любому направлению.</p>
+                        <p>Цена: <span class='price'>60 000 на человека</span></p>
                     </div>
                     <div class="card-action">
                         <a href="#">Подробнее</a>
@@ -92,12 +73,18 @@
             <div class="icon-block">
                 <div class="card">
                     <div class="card-image">
-                        <img src="static/images/kipr.jpg">
-                        <span class="card-title">Фитнес на Кипре</span>
+                        <img src="static/images/bagami.jpg">
+                        <span class="card-title">ДРУЖЕСКАЯ НОВОГОДНЯЯ ДАЙВ-РЕГАТА НА БАГАМАХ</span>
                     </div>
                     <div class="card-content">
-                        <p>I am a very simple card. I am good at containing small bits of information.
-                        I am convenient because I require little markup to use effectively.</p>
+                        <p><span class='title'>Багамы</span></p>
+                        <p>31 декабря по 10 января 2017</p>
+                        <p>Необитаемые острова, 
+                        пустынные просторы розового песка, буйство красок зелени, в этих краях вас 
+                        удивит смесь культур разных народов, микс обычаев и языков. В дополнение к программе, 
+                        для любителей будет организовано несколько погружений с аквалангом, которые удивят 
+                        не только новичков, но и опытных дайверов.</p>
+                        <p>Цена: <span class='price'>1 800 € на человека</span></p>
                     </div>
                     <div class="card-action">
                         <a href="#">Подробнее</a>
@@ -135,47 +122,11 @@
     <div class="parallax"><img src="static/images/background3.jpg" alt="Unsplashed background img 3"></div>
   </div>
 
-  <footer class="page-footer teal">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Информация о нас</h5>
-          <p class="grey-text text-lighten-4">Мы классные ребята проводим спортивные туры по России и всему Миру :).</p>
-
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Полезные ссылки</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Наши контакты в соц сетях</h5>
-          <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      <a class="brown-text text-lighten-3">Сайт работает с 2016 года</a>
-      </div>
-    </div>
-  </footer>
-
-
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="static/js/materialize.js"></script>
-  <script src="static/js/init.js"></script>
-
-  </body>
-</html>
+{% endblock %}
+{%block body_extra %}
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.carousel.carousel-slider').carousel({full_width: true, time_constant: 10});
+        });
+    </script>
+{% endblock %}
