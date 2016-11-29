@@ -58,3 +58,16 @@ footer.page-footer {
 .modal.modal-fixed-footer {
     height: 50%;
 }
+#price {
+    float: right;
+    color: red;
+}
+.price {
+    font-weight: 600;
+}
+#done {
+    float: none;
+}
+.main h3 {
+    font-weight: 900;
+}

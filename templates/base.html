@@ -7,25 +7,60 @@
 
   <!-- CSS  -->
   <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
-  <link href="static/material-design-icons/iconfont/material-icons.css" rel="stylesheet">
-  <link href="static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{url_for('static', filename='material-design-icons/iconfont/material-icons.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='css/materialize.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{{url_for('static', filename='css/style.css')}}" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='model.js')}}"></script>
   {% block extra_head %}{% endblock %}
 <body>
+    <div class="fixed-action-btn">
+     <a class="btn-floating btn-large red" data-target="modal1">
+        <i class="large material-icons">phone</i>
+    </a>
+    </div>
+        <div id="modal1" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h4>Заказать тур</h4>
+                <div class="row">
+                    <form class="col s12 m12">
+                        <div class="col s12 m6">
+                            <div class="input-field">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input id="name" type="text" class="validate"  maxlength="20">
+                                <label for="name">Имя</label>
+                            </div>
+                        </div>
+                        <div class="col s12 m6">
+                            <div class="input-field">
+                                <i class="material-icons prefix">phone</i>
+                                <input id="phone" type="tel" class="validate"  maxlength="12">
+                                <label for="phone">Телефон</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a herf="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Отмена</a>
+                <a class=" modal-action btn-flat" id="sendCall">Заказать тур</a>
+            </div>
+        </div>
+    </div>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="/" class="brand-logo">ФитнесТур</a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="/">Главная</a></li>
         <li><a href="{{url_for('about')}}">О Нас</a></li>
         <li><a href="{{url_for('contacts')}}">Контакты</a></li>
+        <li><a>+7(916) 999 99 99</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
-        <li><a href="/">Главная</a></li>
         <li><a href="{{url_for('about')}}">О Нас</a></li>
         <li><a href="{{url_for('contacts')}}">Контакты</a></li>
+        <li><a>+7(916) 999 99 99</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
