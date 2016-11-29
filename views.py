@@ -54,7 +54,7 @@ def callBack():
     phone = request.form['phone']
     msg = Message("hello",
                   sender='anastacia111@yandex.ru',
-                  recipients=["vskazke.info@gmail.com"],)
+                  recipients=["naim.fruit@gmail.com"],)
     msg.body = 'text body'
     msg.html = "<ul>Name: %s</li>,\
             <li>Phone: %s</li></ul>" %\
