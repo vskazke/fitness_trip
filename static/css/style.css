@@ -71,3 +71,6 @@ footer.page-footer {
 .main h3 {
     font-weight: 900;
 }
+.parallax {
+    float: left;
+}
