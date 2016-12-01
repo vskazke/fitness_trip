@@ -49,7 +49,7 @@
             <div class="icon-block">
                 <div class="card">
                     <div class="card-image">
-                        <img src="static/images/kemer.jpg">
+                        <img src="{{url_for('static', filename=tour.image)}}">
                         <span class="card-title">{{tour.title}}</span>
                     </div>
                     <div class="card-content">
@@ -65,7 +65,7 @@
                         <div class="modal-content">
                             <div class="col s12 m10 offset-m1">
                             <h4>{{tour.title}}</h4>
-                            <img id="details_image" src="{{url_for('static', filename = image)}}"dd>
+                            <img id="details_image" src="{{url_for('static', filename = tour.image)}}">
                             <p><strong>Даты: </strong>{{tour.date}} {{tour.nights}}<span id="price">{{tour.price}}</span></p>
                             <p>{{tour.service}}</p>
                             <p><strong>{{tour.service}}</strong></p>
