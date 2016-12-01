@@ -20,9 +20,10 @@ def index():
         with open(filename) as f:
             tour = yaml.load(f)
         tour['slug'] = os.path.split(filename)[-1][:-5]
+        image = os.path.join(IMG_DIR, tour['slug'] + '.jpg')
         tours.append(tour)
         tours.sort(key=lambda x: x['created'])
-    return render_template('index.html', tours=tours)
+    return render_template('index.html', tours=tours, image=image)
 
 
 @app.route('/about')

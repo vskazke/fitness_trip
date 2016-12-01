@@ -74,3 +74,6 @@ footer.page-footer {
 .parallax {
     float: left;
 }
+#details_image {
+    width: 100%;
+}

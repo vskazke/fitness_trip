@@ -60,9 +60,26 @@
                         
                     </div>
                     <div class="card-action">
-                        <a  href="{{url_for('tour_details', tour=tour.slug)}}">Подробнее</a>
-                        <a></a>
-                        <a></a>
+                        <a href="{{url_for('tour_details', tour=tour.slug)}}" class="btn" data-target="tour_details">Подробнее</a>
+                        <div id="tour_details" class="modal">
+                        <div class="modal-content">
+                            <div class="col s12 m10 offset-m1">
+                            <h4>{{tour.title}}</h4>
+                            <img id="details_image" src="{{url_for('static', filename = image)}}"dd>
+                            <p><strong>Даты: </strong>{{tour.date}} {{tour.nights}}<span id="price">{{tour.price}}</span></p>
+                            <p>{{tour.service}}</p>
+                            <p><strong>{{tour.service}}</strong></p>
+                            <p>{{tour.body|safe }}</p>
+                            
+                        </div>
+                        </div>
+                        <div class="modal-footer">
+                        <a class=" modal-action modal-close waves-effect btn-flat grey">Закрыть</a>
+                        <a class=" modal-action waves-effect btn-flat green" data-target="modal1">Заказать</a>
+                        </div>
+                        </div>
+
+                        <!-- <a  href="{{url_for('tour_details', tour=tour.slug)}}">Подробнее</a> -->
                         <a class="btn-floating  green" data-target="modal1">
                             <i class="large material-icons">done</i>
                         </a>
