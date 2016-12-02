@@ -10,28 +10,28 @@
                 <img src="static/images/Silovye_trenerovki.jpg"> <!-- random image -->
                 <div class="caption center-align">
                     </br>
-                        <h3>Силовые тренировки!</h3>
+                        <h2>Силовые тренировки!</h2>
                     </div>
             </li>
             <li>
                 <img src="static/images/Joga_tury.jpg"> <!-- random image -->
                     <div class="caption center-align">
                     </br>
-                        <h3>Йога туры</h3>
+                        <h2>Йога туры</h2>
                 </div>
             </li>
             <li>
                 <img src="static/images/Extrimalny_otdykh.jpg"> <!-- random image -->
                     <div class="caption center-align">
                     </br>
-                        <h3>Экстримальный отдых</h3>
+                        <h2>Экстримальный отдых</h2>
                     </div>
             </li>
             <li>
                 <img src="static/images/Trenengi_lichnostnogo_rosta.jpg"> <!-- random image -->
                     <div class="caption center-align">
                     </br>
-                        <h3>Тренинги личностного роста</h3>
+                        <h2>Тренинги личностного роста</h2>
                     </div>
             </li>
         </ul>
@@ -62,27 +62,23 @@
                     <div class="card-action">
                         <a href="{{url_for('tour_details', tour=tour.slug)}}" class="btn" data-target="tour_details">Подробнее</a>
                         <div id="tour_details" class="modal">
-                        <div class="modal-content">
-                            <div class="col s12 m10 offset-m1">
-                            <h4>{{tour.title}}</h4>
-                            <img id="details_image" src="{{url_for('static', filename = tour.image)}}">
-                            <p><strong>Даты: </strong>{{tour.date}} {{tour.nights}}<span id="price">{{tour.price}}</span></p>
-                            <p>{{tour.service}}</p>
-                            <p><strong>{{tour.service}}</strong></p>
-                            <p>{{tour.body|safe }}</p>
-                            
+                            <div class="modal-content">
+                                <div class="row">
+                                    <div class="col s12 m8 offset-m2">
+                                        <h4>{{tour.title}}</h4>
+                                        <img id="details_image" src="{{url_for('static', filename = tour.image)}}">
+                                        <p><strong>Даты: </strong>{{tour.date}} {{tour.nights}}<span id="price">{{tour.price}}</span></p>
+                                        <p>{{tour.service}}</p>
+                                        <p><strong>{{tour.service}}</strong></p>
+                                        <p>{{tour.body|safe }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <a class=" modal-action modal-close waves-effect btn grey">Закрыть</a>
+                                <a class=" modal-action waves-effect btn" data-target="modal1">Заказать</a>
+                            </div>
                         </div>
-                        </div>
-                        <div class="modal-footer">
-                        <a class=" modal-action modal-close waves-effect btn-flat grey">Закрыть</a>
-                        <a class=" modal-action waves-effect btn-flat green" data-target="modal1">Заказать</a>
-                        </div>
-                        </div>
-
-                        <!-- <a  href="{{url_for('tour_details', tour=tour.slug)}}">Подробнее</a> -->
-                        <a class="btn-floating  green" data-target="modal1">
-                            <i class="large material-icons">done</i>
-                        </a>
                     </div>
                 </div>
             </div>

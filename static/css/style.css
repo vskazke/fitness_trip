@@ -56,7 +56,7 @@ footer.page-footer {
   margin: 0;
 }
 .modal.modal-fixed-footer {
-    height: 50%;
+    height: 100%;
 }
 #price {
     float: right;
@@ -65,15 +65,23 @@ footer.page-footer {
 .price {
     font-weight: 600;
 }
-#done {
-    float: none;
-}
-.main h3 {
+.main h2 {
     font-weight: 900;
+    opacity: 0.5;
+    color: black;
 }
 .parallax {
     float: left;
 }
 #details_image {
     width: 100%;
+}
+#tour_details {
+    width: 70%;
+}
+.modal .modal-footer .btn {
+    margin: 6px;
+}
+#Social {
+    width: 24px;
 }

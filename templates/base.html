@@ -24,19 +24,26 @@
             <div class="modal-content">
                 <h4>Заказать тур</h4>
                 <div class="row">
-                    <form class="col s12 m12">
-                        <div class="col s12 m6">
+                    <form class="col s12 m8">
+                        <div class="col s12 m12">
                             <div class="input-field">
                                 <i class="material-icons prefix">account_circle</i>
                                 <input id="name" type="text" class="validate"  maxlength="20">
                                 <label for="name">Имя</label>
                             </div>
                         </div>
-                        <div class="col s12 m6">
+                        <div class="col s12 m12">
                             <div class="input-field">
                                 <i class="material-icons prefix">phone</i>
                                 <input id="phone" type="tel" class="validate"  maxlength="12">
                                 <label for="phone">Телефон</label>
+                            </div>
+                        </div>
+                        <div class="col s12 m12">
+                            <div class="input-field">
+                                <i class="material-icons prefix">email</i>
+                                <input id="email" type="tel" class="validate">
+                                <label for="email">E-mail</label>
                             </div>
                         </div>
                     </form>
@@ -50,17 +57,15 @@
     </div>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="/" class="brand-logo">ФитнесТур</a>
+      <a id="logo-container" href="/" class="brand-logo">Training-tour</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="{{url_for('about')}}">О Нас</a></li>
         <li><a href="{{url_for('contacts')}}">Контакты</a></li>
-        <li><a>+7(916) 999 99 99</a></li>
       </ul>
 
       <ul id="nav-mobile" class="side-nav">
         <li><a href="{{url_for('about')}}">О Нас</a></li>
         <li><a href="{{url_for('contacts')}}">Контакты</a></li>
-        <li><a>+7(916) 999 99 99</a></li>
       </ul>
       <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
@@ -71,25 +76,30 @@
   <footer class="page-footer teal">
     <div class="container">
       <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Информация о нас</h5>
-          <p class="grey-text text-lighten-4">Мы классные ребята проводим спортивные туры по России и всему Миру :).</p>
+        <div class="col l7 m7 s12">
+          <h5 class="white-text">Информация для партнёров</h5>
+          <p class="grey-text text-lighten-4"> 
+          С нами могут сотрудничать как тур фирмы, так и тренеры и организаторы. 
+          Если у вас есть хорошая идея в этой области, мы будим рады её обсудить.
+          </br>
+          По всем вопросом обращайтесь по этому адресу m.barannik@icloud.com 
+          </br>
+          Спасибо!</p>
 
 
         </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Полезные ссылки</h5>
+        <div class="col l3 m3 s12">
+          <h5 class="white-text">Контакты</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
+            <li><a class="white-text" href="https://vk.com/trainingtourcom">VK</a></li>
+            <li><a class="white-text" href="https://www.facebook.com/groups/Trainingtour/">FB</a></li>
+              <li><a class="white-text">тел:+7(917)5658774</a></li>
+              <li><a class="white-text">E-Mail: m.barannik@icloud.com</a></li>
           </ul>
         </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Наши контакты</h5>
+        <div class="col l2  m2 s12">
+          <h5 class="white-text">Наши партнеры</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
             <li><a class="white-text" href="#!">Link 2</a></li>
             <li><a class="white-text" href="#!">Link 3</a></li>
             <li><a class="white-text" href="#!">Link 4</a></li>
@@ -111,12 +121,12 @@
   <script src="static/js/materialize.js"></script>
   <script src="static/js/init.js"></script>
   {%block body_extra %}{% endblock %}
-  <script type="text/javascript">
 
-    $(document).ready(function(){
-        $('.carousel.carousel-slider').carousel({full_width: true, time_constant: 10});
-        $(".button-collapse").sideNav();
-    });
-  </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.slider').slider();
+            $('.modal').modal();
+        });
+    </script>
   </body>
 </html>
