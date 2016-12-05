@@ -65,10 +65,15 @@ footer.page-footer {
 .price {
     font-weight: 600;
 }
-.main h2 {
+.main h3 {
     font-weight: 900;
-    opacity: 0.5;
-    color: black;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.slider .slides li .caption{
+    width: 50%;
+    top: 25%;
+    left: 25%;
 }
 .parallax {
     float: left;
@@ -77,11 +82,13 @@ footer.page-footer {
     width: 100%;
 }
 #tour_details {
-    width: 70%;
+    width: 80%;
 }
 .modal .modal-footer .btn {
     margin: 6px;
 }
 #Social {
     width: 24px;
+}
+.btn {
 }
