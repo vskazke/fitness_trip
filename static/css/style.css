@@ -68,7 +68,8 @@ footer.page-footer {
 .main h3 {
     font-weight: 900;
     background-color: rgba(192, 192, 192, 0.7);
-    display: inline;
+    /* display: inline; */
+    width:70%;
 }
 
 .slider .slides li .caption{
@@ -94,8 +95,8 @@ footer.page-footer {
 .btn {
 }
 #finish {
-    width: 100px;
-    height: 50px;
+    width: 150px;
+    height: 80px;
 }
 
 .card-image h5 {
