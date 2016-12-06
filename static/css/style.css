@@ -73,7 +73,7 @@ footer.page-footer {
 }
 
 .slider .slides li .caption{
-    width:50%;
+    width:70%;
     top: 25%;
     left: 25%;
 }
@@ -102,4 +102,7 @@ footer.page-footer {
 .card-image h5 {
     background-color: rgba(192, 192, 192, 0.5);
 
+}
+#partners {
+    font-size: 12px;
 }
