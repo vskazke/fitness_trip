@@ -50,39 +50,44 @@
                 <div class="card">
                     <div class="card-image">
                         <img src="{{url_for('static', filename=tour.image)}}">
-                        <span class="card-title">{{tour.title}}</span>
+                        <span class="card-title left"><h5>{{tour.title}}</h5><img class="right" src="{{url_for('static', filename='images/finish.jpg')}}" id="finish"></span>
                     </div>
                     <div class="card-content">
                         <div class="price">{{tour.place}}<span id="price">{{tour.price}}</span></div>
                         <p><strong>Даты: </strong>{{tour.date}} {{tour.nights}}</p>
                         <p><strong>{{tour.service}}</strong></p>
                         <p>{{tour.info}}</p>
+                        <p id="slug">{{tour.slug}}</p>
                         
                     </div>
                     <div class="card-action center">
-                        <a href="{{url_for('tour_details', tour=tour.slug)}}" class="btn" data-target="tour_details">Подробнее</a>
-                        <div id="tour_details" class="modal">
-                            <div class="modal-content">
-                                <div class="row">
-                                    <div class="col s12 m8 offset-m2">
-                                        <h4>{{tour.title}}</h4>
-                                        <img id="details_image" src="{{url_for('static', filename = tour.image)}}">
-                                        <p><strong>Даты: </strong>{{tour.date}} {{tour.nights}}<span id="price">{{tour.price}}</span></p>
-                                        <p>{{tour.service}}</p>
-                                        <p><strong>{{tour.service}}</strong></p>
-                                        <p>{{tour.body|safe }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <a class=" modal-action modal-close waves-effect btn grey">Закрыть</a>
-                                <a class=" modal-action waves-effect btn" data-target="modal1">Заказать</a>
-                            </div>
-                        </div>
+                        <a class="btn" data-target="tour_details" onclick="Details">Подробнее</a>
                     </div>
                 </div>
             </div>
         </div>
+                        <!-- <div id="tour_details" class="modal1"> -->
+                            <!-- <div class="modal-content" id="answer"> -->
+                                <!-- [> <div class="row"> <] -->
+                                    <!-- [> <div class="col s12 m8 offset-m2"> <] -->
+                                        <!-- [> <h4>{{tour.title}}</h4> <] -->
+                                        <!-- [> <img id="details_image" src="{{url_for('static', filename = tour.image)}}"> <] -->
+                                        <!-- [> <p><strong>Даты: </strong>{{tour.date}} {{tour.nights}}<span id="price">{{tour.price}}</span></p> <] -->
+                                        <!-- [> <p>{{tour.service}}</p> <] -->
+                                        <!-- [> <p><strong>{{tour.service}}</strong></p> <] -->
+                                        <!-- [> <p>{{tour.body|safe }}</p> <] -->
+                                    <!-- [> </div> <] -->
+                                <!-- [> </div> <] -->
+                            <!-- </div> -->
+                            <!-- <div class="modal-footer"> -->
+                                <!-- <a class=" modal-action modal-close waves-effect btn grey">Закрыть</a> -->
+                                <!-- <a class=" modal-action waves-effect btn" data-target="modal1">Заказать</a> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+            <!-- </div> -->
+        <!-- </div> -->
         {% endfor %}
         </div>
     </div>

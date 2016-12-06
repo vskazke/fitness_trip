@@ -1,0 +1,210 @@
+{% extends "base.html" %}
+{%block extra_head %}
+
+{%endblock%}
+{%block content %}
+    <div class="main">
+    <div class="slider">
+        <ul class="slides">
+            <li>
+                <img src="static/images/Silovye_trenerovki.jpg"> <!-- random image -->
+                <div class="caption center-align">
+                    </br>
+                        <h3>Силовые тренировки!</h3>
+                    </div>
+            </li>
+            <li>
+                <img src="static/images/Joga_tury.jpg"> <!-- random image -->
+                    <div class="caption center-align">
+                    </br>
+                        <h3>Йога туры</h3>
+                </div>
+            </li>
+            <li>
+                <img src="static/images/Extrimalny_otdykh.jpg"> <!-- random image -->
+                    <div class="caption center-align">
+                    </br>
+                        <h3>Экстримальный отдых</h3>
+                    </div>
+            </li>
+            <li>
+                <img src="static/images/Trenengi_lichnostnogo_rosta.jpg"> <!-- random image -->
+                    <div class="caption center-align">
+                    </br>
+                        <h3>Тренинги личностного роста</h3>
+                    </div>
+            </li>
+        </ul>
+    </div>
+    </div>
+
+  <div class="container">
+      <div class="section"> 
+          <h4>Ближайшие события</h4>
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+            <div class="icon-block">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{url_for('static', filename='images/kemer.jpg')}}">
+                        <span class="card-title left"><h5>Фитнес в Турции</h5><img class="right" src="{{url_for('static', filename='images/finish.jpg')}}" id="finish"></span>
+                    </div>
+                    <div class="card-content">
+                        <div class="price">Турция, Кемер<span id="price">15 000 RUB</span></div>
+                        <p><strong>Даты: </strong>3 декабря 7 ночей</p>
+                        <p><strong>Все включено</strong></p>
+                        <p>Фитнес пакет 2 тренировки ежедневно. Танцы, йога, фитнес, возможность заниматься персонально по любому направлению.</p>
+                        
+                    </div>
+                    <div class="card-action center">
+                        <a class="btn" data-target="tour_details">Подробнее</a>
+                    </div>
+                        <div id="tour_details" class="modal">
+                            <div class="modal-content" id="answer">
+                                 <div class="row"> 
+                                     <div class="col s12 m8 offset-m2"> 
+                                         <h4>Фитнес в Турции</h4> 
+                                         <img id="details_image" src="{{url_for('static', filename = 'images/kemer.jpg')}}"> 
+                                         <p><strong>Даты: </strong>3 декабря 7 ночей<span id="price">15 000 RUB</span></p> 
+                                         <p>Все включено</strong></p> 
+                                         <p>
+                                            Турция в декабре - недельный заряд солнцем и позитивом. Одна неделя посреди зимы, проведенная в дружной компании на нежном 
+                                            солнышке в прекрасном отеле - самый лучший способ зарядиться энергией и хорошим настроением на всю зиму вперед. 
+                                            Плюс ежедневные тренировки на берегу моря под шум волн, консультации профессионалов фитнеса по всем вашим 
+                                            вопросам - приятно и полезно для души и тела.
+                                         </p> 
+                                     </div> 
+                                 </div> 
+                            </div>
+                            <div class="modal-footer">
+                                <a class=" modal-action modal-close waves-effect btn grey">Закрыть</a>
+                                <a class=" modal-action waves-effect btn" data-target="modal1">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="col s12 m4">
+            <div class="icon-block">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{url_for('static', filename='images/phuket.jpg')}}">
+                        <span class="card-title left"><h5>Танцы, Йога, Фитнес на Пхукете</h5></span>
+                    </div>
+                    <div class="card-content">
+                        <div class="price">Тайланд, Пхукет<span id="price">60 000 RUB</span></div>
+                        <p><strong>Даты: </strong>5 апреля 14 ночей</p>
+                        <p><strong>Завтрак, отель Naithonburi</strong></p>
+                        <p>Фитнес пакет 3-4 тренировки в день на выбор, 3 тренера . Танцы, йога, фитнес, возможность заниматься персонально по любому направлению.</p>
+                    </div>
+                    <div class="card-action center">
+                        <a class="btn" data-target="tour_details2">Подробнее</a>
+                    </div>
+                        <div id="tour_details2" class="modal">
+                            <div class="modal-content" id="answer">
+                                 <div class="row"> 
+                                     <div class="col s12 m8 offset-m2"> 
+                                         <h4>Фитнес в Турции</h4> 
+                                         <img id="details_image" src="{{url_for('static', filename = 'images/phuket.jpg')}}"> 
+                                         <p><strong>Даты: </strong>5 апреля 14 ночей<span id="price">60 000 RUB</span></p> 
+                                         <p><strong>Завтрак, отель Naithonburi</strong></p> 
+                                         <p>
+                                            Таиланд в апреле - уникальная возможность узнать страну изнутри, привести свое тело и внутренний мир в порядок. Отель в заповедном, спокойном месте, на одном из красивейших тайских пляжей, потрясающая азиатская кухня, богатая протеинами, ежедневные тренировки на берегу Индийского океана и потрясающе захватывающий, веселый тайский Новый Год Сонгран! Эмоций, впечатлений, красоты природы, различных тренировок и тайских улыбок хватит на всех! Будем рады видеть тебя в нашей компании, которая приезжает в этот тур уже девятый год подряд.
+                                         </p> 
+                                     </div> 
+                                 </div> 
+                            </div>
+                            <div class="modal-footer">
+                                <a class=" modal-action modal-close waves-effect btn grey">Закрыть</a>
+                                <a class=" modal-action waves-effect btn" data-target="modal1">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="col s12 m4">
+            <div class="icon-block">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{url_for('static', filename='images/regatta.jpg')}}">
+                        <span class="card-title left"><h5>Дайв-Регата на Багамах</h5></span>
+                    </div>
+                    <div class="card-content">
+                        <div class="price">Багамы<span id="price">1 800 EURO</span></div>
+                        <p><strong>Даты: </strong>31 декабря - 10 января 10 ночей</p>
+                        <p>В дополнение к программе, для любителей будет организовано несколько погружений с аквалангом, которые удивят не только новичков, но и опытных дайверов.</p>
+                        
+                    </div>
+                    <div class="card-action center">
+                        <a class="btn" data-target="tour_details3">Подробнее</a>
+                    </div>
+                        <div id="tour_details3" class="modal">
+                            <div class="modal-content" id="answer">
+                                 <div class="row"> 
+                                     <div class="col s12 m8 offset-m2"> 
+                                         <h4>Дайв-Регата на Багамах</h4> 
+                                         <img id="details_image" src="{{url_for('static', filename = 'images/regatta.jpg')}}"> 
+                                         <p><strong>Даты: </strong>31 декабря - 10 января 10 ночей<span id="price">1 800 EURO</span></p> 
+                                         <p>
+                                            Необитаемые острова, пустынные просторы розового песка, буйство красок зелени, в этих краях вас удивит смесь культур разных народов, микс обычаев и языков. В дополнение к программе, для любителей будет организовано несколько погружений с аквалангом, которые удивят не только новичков, но и опытных дайверов.
+                                         </p> 
+                                     </div> 
+                                 </div> 
+                            </div>
+                            <div class="modal-footer">
+                                <a class=" modal-action modal-close waves-effect btn grey">Закрыть</a>
+                                <a class=" modal-action waves-effect btn" data-target="modal1">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="section">
+
+      <div class="row">
+        <div class="col s12 center">
+          <h3><i class="mdi-content-send brown-text"></i></h3>
+          <h4>О Нашем Сайте</h4>
+          <p class="left-align light">
+          Этот ресурс создан для всех, кто любит увлекательные путешествия, саморазвитие и хорошие компании! 
+          Мы сами ищем интересные события и предлагаем их Вам. Мы делаем для Вас уникальные тренинги, и вы можете 
+          приходить к нам снова и снова за новыми впечатлениями. Все тренеры, представленные на нашем сайте, являются 
+          действующими профессионалами и имеют опыт проведения выездных мероприятий. Команда сайта - это люди, знающие 
+          туристическую и тренинговую деятельность изнутри. Наш ресурс постоянно растет, и вы можете пользоваться им каждый раз, 
+          идя по пути развития и открытия новых впечатлений. </br>Желаем вам приятного отдыха!</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="static/images/Otdykh_v_khoroshey_kompanii.jpg" alt="Unsplashed background img 3"></div>
+  </div>
+
+{% endblock %}
+{%block body_extra %}
+    <script type="text/javascript">
+        $(document).ready(function(){
+            <!-- $('.slider').slider(); -->
+            $('.modal').modal();
+        });
+    </script>
+{% endblock %}

@@ -22,7 +22,7 @@ def index():
         tour['slug'] = os.path.split(filename)[-1][:-5]
         tours.append(tour)
         tours.sort(key=lambda x: x['created'])
-    return render_template('index.html', tours=tours)
+    return render_template('index2.html', tours=tours)
 
 
 @app.route('/about')
@@ -35,17 +35,20 @@ def contacts():
     return render_template('contacts.html')
 
 
-@app.route('/tour_ditails/<tour>')
-def tour_details(tour):
-    filename = os.path.join(DIRNAME, tour + '.yaml')
-    image = os.path.join(IMG_DIR, tour + '.jpg')
+@app.route('/tour_details/', methods=['POST'])
+def tour_details():
+    slug = request.form['slug']
+    filename = os.path.join(DIRNAME, slug + '.yaml')
+    image = os.path.join(IMG_DIR, slug + '.jpg')
     print(image)
     if not os.path.exists(filename):
         abort(404)
     with open(filename) as f:
         print(filename)
         tour = yaml.load(f)
-    return render_template('details.html', tour=tour, image=image)
+    return '''
+<h4>hhhhh</h4>
+'''
 
 
 @app.route('/callBack', methods=['POST'])

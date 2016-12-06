@@ -20,5 +20,25 @@ $(document).ready(function(){
       $("#phone").css('background', 'red');
     };
   });
+  $("#Details").click(function() {
+    var slug = $("#slug").get(0).innerHTML;
+    console.log(slug);
+    $.post('/tour_details/',
+          {'slug': slug},
+          function (tour) {
+            // $('#answer').load(tour);
+            $('.modal1').modal();
+              $('#answer').append( '<div id="tour_details" class="modal">');
+                                        // // <img id="details_image" src="{{url_for('static', filename = tour.image)}}">
+                                        // // <p><strong>Даты: </strong>{{tour.date}} {{tour.nights}}<span id="price">{{tour.price}}</span></p>
+                                        // // <p>{{tour.service}}</p>
+                                        // // <p><strong>{{tour.service}}</strong></p>
+                                        // // <p>{{tour.body|safe }}</p>
+          });
+    // }else {
+      // $("#name").css('background', 'red');
+      // $("#phone").css('background', 'red');
+    // };
+  });
 });
 
