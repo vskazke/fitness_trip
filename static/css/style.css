@@ -72,6 +72,11 @@ footer.page-footer {
     padding: 20px;
     /* max-width:70%; */
 }
+.main h5 {
+    font-weight: 900;
+    background-color: rgba(192, 192, 192, 0.7);
+    width:100%;
+}
 
 .slider .slides li .caption{
     top: 25%;
