@@ -122,7 +122,7 @@
                             <div class="modal-content" id="answer">
                                  <div class="row"> 
                                      <div class="col s12 m8 offset-m2"> 
-                                         <h4>Танцы, Йога, Фитнес на Пхукете</h4> 
+                                         <h4 id="tourName">Танцы, Йога, Фитнес на Пхукете</h4> 
                                          <img id="details_image" src="{{url_for('static', filename = 'images/phuket.jpg')}}"> 
                                          <p><strong>Даты: </strong>5 апреля 14 ночей<span id="price">60 000 RUB</span></p> 
                                          <p><strong>Завтрак, отель Naithonburi</strong></p> 
@@ -134,7 +134,7 @@
                             </div>
                             <div class="modal-footer">
                                 <a class=" modal-action modal-close waves-effect btn grey">Закрыть</a>
-                                <a class=" modal-action waves-effect btn" data-target="modal1">Заказать</a>
+                                <a class=" modal-action modal-close waves-effect btn" data-target="modal1" id="getTour">Заказать</a>
                             </div>
                         </div>
                     </div>
@@ -160,7 +160,7 @@
                             <div class="modal-content" id="answer">
                                  <div class="row"> 
                                      <div class="col s12 m8 offset-m2"> 
-                                         <h4>Дайв-Регата на Багамах</h4> 
+                                         <h4 id="tourName">Дайв-Регата на Багамах</h4> 
                                          <img id="details_image" src="{{url_for('static', filename = 'images/regatta.jpg')}}"> 
                                          <p><strong>Даты: </strong>31 декабря - 10 января 10 ночей<span id="price">1 800 EURO</span></p> 
                                          <p>
@@ -171,7 +171,7 @@
                             </div>
                             <div class="modal-footer">
                                 <a class=" modal-action modal-close waves-effect btn grey">Закрыть</a>
-                                <a class=" modal-action waves-effect btn" data-target="modal1">Заказать</a>
+                                <a class=" modal-action modal-close waves-effect btn" data-target="modal1" id="getTour">Заказать</a>
                             </div>
                         </div>
                     </div>
@@ -221,7 +221,7 @@
     <script type="text/javascript">
         $(document).ready(function(){
             <!-- $('.slider').slider(); -->
-            $('.modal').modal();
+            <!-- $('.modal').modal(); -->
         });
     </script>
 {% endblock %}

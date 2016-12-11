@@ -55,13 +55,25 @@ def tour_details():
 def callBack():
     name = request.form['name']
     phone = request.form['phone']
+    tour = request.form['tour']
+    email = request.form['email']
     msg = Message("hello",
                   sender='anastacia111@yandex.ru',
                   recipients=["naim.fruit@gmail.com"],)
     msg.body = 'text body'
     msg.html = "<ul>Name: %s</li>,\
-            <li>Phone: %s</li></ul>" %\
-        (name, phone)
+                <li>Phone: %s</li></ul>" %\
+               (name, phone)
+    msg.html = "<ul>Name: %s</li>,\
+            <li>Phone: %s</li>,\
+            <li>E-mail: %s</li>,\
+            <li>Tour: %s</ul>" %\
+        (name, phone, email, tour)
     mail.send(msg)
     return 'send'
 
+
+@app.route('/getTour', methods=['POST'])
+def getTour():
+    tour = request.form['tour']
+    return tour
