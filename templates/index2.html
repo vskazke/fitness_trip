@@ -86,19 +86,41 @@
             <div class="icon-block">
                 <div class="card">
                     <div class="card-image">
-                        <img src="{{url_for('static', filename='images/kemer.jpg')}}">
-                        <span class="card-title left"><h5>Фитнес в Турции</h5></span>
+                        <img src="{{url_for('static', filename='images/goa.jpg')}}">
+                        <span class="card-title left"><h5>Йога & Фитнес на Гоа в Январе.</h5></span>
                     </div>
                     <div class="card-content">
-                        <div class="price">Турция, Кемер<span id="price">15 000 RUB</span></div>
-                        <p><strong>Даты: </strong>3 декабря 7 ночей</p>
-                        <p><strong>Все включено</strong></p>
-                        <p>Фитнес пакет 2 тренировки ежедневно. Танцы, йога, фитнес, возможность заниматься персонально по любому направлению.</p>
-                        
+                        <div class="price">Гоа<span id="price">81 000 RUB/2 чел.</span></div>
+                        <p><strong>Даты: </strong>21 января 12 ночей</p>
+                        <p><strong>Завтрак, </br>отель Sea Breeze Beach 3*</strong></p>
+                        <p>2 тренировки ежедневно + спортивные мероприятия
+                        (Персональный тренинг, личный план питания, распорядок дня и прочие услуги персонального тренера за доп. плату) 
+                        С собой берем собственный коврик :)</p>
                     </div>
                     <div class="card-action center">
-                        <img src="{{url_for('static', filename='images/finished.jpg')}}" id="finish">
+                        <a class="btn" data-target="tour_details4">Подробнее</a>
                     </div>
+                        <div id="tour_details4" class="modal">
+                            <div class="modal-content" id="answer">
+                                 <div class="row"> 
+                                     <div class="col s12 m8 offset-m2"> 
+                                         <h4 id="tourName">Йога & Фитнес на Гоа в Январе.</h4> 
+                                         <img id="details_image" src="{{url_for('static', filename = 'images/goa.jpg')}}"> 
+                                         <p><strong>Даты: </strong>21 января 12 ночей<span id="price">81 000 RUB/2 чел.</span></p> 
+                                         <p><strong>Завтрак, </br> отель Sea Breeze Beach 3*</strong></p> 
+                                         <p>
+                                         2 тренировки ежедневно + спортивные мероприятия (Персональный тренинг, 
+                                         личный план питания, распорядок дня и прочие услуги персонального тренера 
+                                         за доп. плату. С собой берем собственный коврик :)
+                                         </p> 
+                                     </div> 
+                                 </div> 
+                            </div>
+                            <div class="modal-footer">
+                                <a class=" modal-action modal-close waves-effect btn grey">Закрыть</a>
+                                <a class=" modal-action modal-close waves-effect btn" data-target="modal1" id="getTour">Заказать</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -174,6 +196,26 @@
                                 <a class=" modal-action modal-close waves-effect btn" data-target="modal1" id="getTour">Заказать</a>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        <div class="col s12 m4">
+            <div class="icon-block">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{url_for('static', filename='images/kemer.jpg')}}">
+                        <span class="card-title left"><h5>Фитнес в Турции</h5></span>
+                    </div>
+                    <div class="card-content">
+                        <div class="price">Турция, Кемер<span id="price">15 000 RUB</span></div>
+                        <p><strong>Даты: </strong>3 декабря 7 ночей</p>
+                        <p><strong>Все включено</strong></p>
+                        <p>Фитнес пакет 2 тренировки ежедневно. Танцы, йога, фитнес, возможность заниматься персонально по любому направлению.</p>
+                        
+                    </div>
+                    <div class="card-action center">
+                        <img src="{{url_for('static', filename='images/finished.jpg')}}" id="finish">
+                    </div>
                     </div>
                 </div>
             </div>
